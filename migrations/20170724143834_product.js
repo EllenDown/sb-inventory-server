@@ -4,12 +4,12 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.text('name').notNullable();
     table.text('category').notNullable();
-    table.float('price').notNullable();
-    table.integer('totalQuantity');
-    table.integer('smallQuantityAvailable');
-    table.integer('mediumQuantityAvailable');
-    table.integer('largeQuantityAvailable');
-    table.integer('xlQuantityAvailable');
+    table.string('price').notNullable();
+    table.string('totalQuantity');
+    table.string('smallQuantityAvailable');
+    table.string('mediumQuantityAvailable');
+    table.string('largeQuantityAvailable');
+    table.string('xlQuantityAvailable');
   })
 };
 

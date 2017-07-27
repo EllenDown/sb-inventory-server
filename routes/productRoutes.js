@@ -9,4 +9,13 @@ router.get('/', (req, res) => {
   });
 });
 
+// router.post('/',(req, res)=> {
+//   let post = req.body;
+//   queries.createProduct()
+//   .returning('*')
+//   .then(function(productPost){
+//     res.json(productPost);
+//   });
+// });
+
 module.exports = router;
