@@ -37,7 +37,7 @@ app.put('/product/:id',(req, res)=> {
 app.delete('/product/:id',(req, res)=> {
   let id = req.params.id;
   let drop = req.body;
-  knex('product').del(drop)
+  knex('product').where('id', id).del(drop)
   .returning('*')
   .then(product =>{
     res.json(product);
